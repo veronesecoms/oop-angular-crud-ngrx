@@ -4,4 +4,7 @@ export class Usuario {
         public nome?: string,
         public cidade?: string
     ) {}
+    static fromJson(jsonData: any): Usuario {
+        return Object.assign(new Usuario(jsonData.id), jsonData);
+    }
 }
