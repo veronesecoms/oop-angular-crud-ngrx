@@ -1,0 +1,9 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Renato Maionese",
+      "cidade": "Franca"
+    }
+  ]
+}

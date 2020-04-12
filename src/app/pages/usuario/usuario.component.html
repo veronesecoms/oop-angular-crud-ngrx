@@ -1,0 +1,40 @@
+<form (ngSubmit)="save()" [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <input formControlName="nome" type="text" class="form-control" id="inputName" placeholder="Nome">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input formControlName="cidade" type="text" class="form-control" id="exampleInputPassword1"
+          placeholder="Cidade">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button type="submit" class="btn btn-primary">{{editing === false ? 'Cadastrar' : 'Alterar'}}</button>
+      <button (click)="cancel()" type="button" class="btn btn-warning ml-2">Cancelar</button>
+    </div>
+  </div>
+</form>
+
+
+<table class="table table-striped mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Cidade</th>
+      <th scope="col">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of view | async">
+      <td>{{ usuario.nome }}</td>
+      <td>{{ usuario.cidade }}</td>
+      <td>
+        <button (click)="editHandler(usuario)" type="button" class="btn btn-secondary">Editar</button>
+        <button (click)="delete(usuario.id)" type="button" class="btn btn-danger ml-2">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
