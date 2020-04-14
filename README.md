@@ -1,9 +1,14 @@
   # :rocket: OOP Crud Angular
 
-This is a basic crud example of how you can can extend a base component and service that have all the similar functions between components and services.
+This is a basic crud example of how you can can extend a base component and service that have all the similar functions and states between yours components.
+
+## Installing
+
+Just run `npm install` to install all the dependencies.
 
 ## Development server
 
+Run `json-server --watch db.json` to start the fake api;
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
