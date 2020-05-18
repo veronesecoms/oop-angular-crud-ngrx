@@ -1,6 +1,6 @@
   # :rocket: OOP Crud Angular
 
-This is a basic crud example of how you can can extend a base component and service that have all the similar functions and states between yours components.
+This is a basic crud example of how you can can extend a base component and service that have all the similar functions and states between yours components. This repository also uses ngrx store/effects.
 
 ## Installing
 
