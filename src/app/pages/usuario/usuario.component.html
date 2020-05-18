@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="col-md-4">
-      <button type="submit" class="btn btn-primary">{{editing === false ? 'Cadastrar' : 'Alterar'}}</button>
+      <button id="my-element" type="submit" class="btn btn-primary">{{editing === false ? 'Cadastrar' : 'Alterar'}}</button>
       <button (click)="cancel()" type="button" class="btn btn-warning ml-2">Cancelar</button>
     </div>
   </div>
@@ -28,7 +28,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let usuario of view | async">
+    <tr *ngFor="let usuario of users$ | async">
       <td>{{ usuario.nome }}</td>
       <td>{{ usuario.cidade }}</td>
       <td>
